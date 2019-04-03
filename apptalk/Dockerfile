@@ -4,8 +4,8 @@ EXPOSE 80
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["apptalk/apptalk.csproj", "apptalk/"]
-RUN dotnet restore "apptalk/apptalk.csproj"
+COPY ["apptalk.csproj", "apptalk/"]
+RUN dotnet restore "apptalk.csproj"
 COPY . .
 WORKDIR "/src/apptalk"
 RUN dotnet build "apptalk.csproj" -c Release -o /app
