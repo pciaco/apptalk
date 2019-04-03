@@ -2,7 +2,7 @@
 services:
   - docker
 before_install:
-  - docker build -t pciaco/apptalk:latest ./apptalk
+  - docker build -t pciaco/apptalk:latest .
 script:
   - docker images pciaco/apptalk
 after_success: 
